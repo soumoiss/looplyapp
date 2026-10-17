@@ -1,0 +1,2 @@
+alter publication supabase_realtime add table public.archive_media_comment_recipients;
+alter publication supabase_realtime add table public.community_gallery_comment_recipients;
