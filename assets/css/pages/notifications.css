@@ -1,0 +1,13 @@
+.page-notifications .notifications-panel { padding: clamp(14px, 3vw, 24px); }
+.notifications-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+.notification-list { display: grid; }
+.notification-row { display: flex; align-items: flex-start; gap: 13px; padding: 16px 10px; border-bottom: 1px solid var(--line); text-decoration: none; transition: background .15s ease; }
+.notification-row:hover { background: var(--surface-soft); }
+.notification-row.is-unread { background: color-mix(in srgb, var(--primary) 5%, var(--surface)); }
+.notification-dot { width: 10px; height: 10px; flex: 0 0 auto; margin-top: 6px; border-radius: 50%; background: transparent; }
+.is-unread .notification-dot { background: var(--primary); }
+.notification-copy { display: grid; gap: 4px; min-width: 0; }
+.notification-copy > span { overflow-wrap: anywhere; }
+.notification-copy time { color: var(--muted); font-size: 12px; }
+.notification-empty { margin: 0; padding: 25px 10px; color: var(--muted); text-align: center; }
+.notification-status { min-height: 1.3em; margin: 8px 0 0; color: #a13f59; font-size: 13px; }

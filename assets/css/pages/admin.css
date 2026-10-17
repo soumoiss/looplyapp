@@ -1,0 +1,18 @@
+.page-title-panel { margin-bottom: 16px; }
+.archive-import { margin-top: 22px; padding: 17px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+.archive-import form { display: grid; gap: 13px; }
+.archive-import .field-hint { display: block; margin-top: 6px; color: var(--muted); font-size: 10px; line-height: 1.5; }
+.archive-import-progress { padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--muted); background: var(--surface-soft); font-size: 11px; }
+.archive-import-errors { max-height: 240px; margin: 0; padding: 10px 10px 10px 30px; overflow: auto; border: 1px solid color-mix(in srgb, #a13f59 28%, var(--line)); border-radius: 10px; color: #a13f59; background: color-mix(in srgb, #a13f59 5%, var(--surface)); font-size: 10px; line-height: 1.6; }
+.archive-import-errors[hidden] { display: none; }
+.admin-archive-card-body { margin-top: 10px; border-top: 1px solid var(--line); padding-top: 9px; }
+.admin-archive-card-body summary { width: fit-content; color: var(--primary); cursor: pointer; font-size: 10px; font-weight: 750; }
+.admin-archive-card-body pre { max-height: 420px; margin: 9px 0 0; padding: 13px; overflow: auto; border: 1px solid var(--line); border-radius: 10px; color: var(--text); background: var(--surface-soft); font: inherit; font-size: 11px; line-height: 1.65; white-space: pre-wrap; overflow-wrap: anywhere; }
+.admin-record-hint { color: var(--muted); font-size: 10px; }
+.admin-record .admin-media-link a { color: var(--primary); }
+.admin-record .admin-comment-form { margin-top: 12px; }
+.admin-record .admin-comment-form textarea { width: 100%; min-height: 64px; resize: vertical; padding: 9px; border: 1px solid var(--line); border-radius: 9px; color: var(--text); background: var(--surface-soft); font: inherit; font-size: 10px; }
+.admin-record .admin-comment-form [data-status][data-kind="error"] { color: #a13f59; }
+.admin-record .admin-comment-form [data-status][data-kind="success"] { color: var(--primary); }
+@media (max-width: 620px) { .archive-import { padding: 13px; } .admin-archive-card-body pre { max-height: 300px; } }
+

@@ -1,0 +1,9 @@
+.page-settings .settings-form { display: grid; gap: 18px; max-width: 720px; padding: clamp(18px, 4vw, 30px); }
+.page-settings fieldset { display: grid; grid-template-columns: 140px minmax(0, 1fr); align-items: center; gap: 12px 18px; margin: 0; padding: 0 0 18px; border: 0; border-bottom: 1px solid var(--line); }
+.page-settings fieldset legend { grid-column: 1 / -1; margin-bottom: 8px; color: var(--primary); font-weight: 800; }
+.page-settings fieldset label { color: var(--muted); }
+.page-settings fieldset select { min-height: 46px; padding: 0 12px; border: 1px solid var(--line); border-radius: 13px; color: var(--text); background: var(--surface-strong); }
+.page-settings .settings-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.page-settings [data-settings-status][data-kind="error"] { color: #a13f59; }
+.page-settings [data-settings-status][data-kind="success"] { color: var(--primary); }
+@media (max-width: 560px) { .page-settings fieldset { grid-template-columns: 1fr; gap: 8px; } }

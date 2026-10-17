@@ -1,0 +1,9 @@
+.page-conversation .conversation-back { display: inline-flex; margin: 0 0 12px; color: var(--primary); text-decoration: none; font-weight: 750; }
+.page-conversation .chat-thread-panel { min-height: min(72vh, 780px); }
+.page-conversation .chat-thread { min-height: min(64vh, 700px); }
+@media (max-width: 680px) {
+  .page-conversation .chat-sidebar { display: none; }
+  .page-conversation .chat-layout { grid-template-columns: minmax(0, 1fr); }
+  .page-conversation .chat-thread-panel { min-height: calc(100dvh - 245px); }
+  .page-conversation .chat-thread { min-height: calc(100dvh - 300px); }
+}

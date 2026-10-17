@@ -1,0 +1,10 @@
+.page-users .people-area { padding: clamp(15px, 3vw, 24px); }
+.page-users .people-search-heading h2 { margin: 0 0 12px; font-size: 1.15rem; }
+.page-users .people-search-form { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 9px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 15px; background: var(--surface-soft); }
+.page-users .people-search-form input { min-width: 0; min-height: 40px; border: 0; outline: 0; color: var(--text); background: transparent; font: inherit; }
+.page-users .profile-results { display: grid; gap: 8px; margin-top: 14px; }
+.page-users .person-result { display: flex; align-items: center; gap: 12px; padding: 11px; border: 1px solid var(--line); border-radius: 15px; background: var(--surface); }
+.page-users .person-result > div:nth-child(2) { flex: 1; min-width: 0; }
+.page-users .person-result-actions { display: flex; flex-wrap: wrap; gap: 7px; }
+.page-users .person-result-actions .text-button { padding: 6px 8px; }
+@media (max-width: 540px) { .page-users .person-result { align-items: flex-start; flex-wrap: wrap; } .page-users .person-result-actions { width: 100%; justify-content: flex-end; } }

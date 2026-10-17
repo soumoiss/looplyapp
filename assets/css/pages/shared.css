@@ -1,0 +1,44 @@
+.looply-page .page-header { position: sticky; top: 8px; z-index: 700; flex-wrap: wrap; padding: 8px 10px; border: 1px solid var(--line); border-radius: 20px; background: color-mix(in srgb, var(--bg) 82%, white); box-shadow: var(--shadow-sm); backdrop-filter: blur(18px); }
+.looply-page .page-navigation { flex: 1 1 240px; flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; }
+.looply-page .page-navigation::-webkit-scrollbar { display: none; }
+.looply-page .page-navigation .header-action { position: relative; flex: 0 0 auto; }
+.looply-page .page-navigation [aria-current="page"] { color: var(--primary); border-color: color-mix(in srgb, var(--primary) 32%, var(--line)); background: var(--surface-strong); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--primary) 10%, transparent); }
+.page-navigation-icon { width: 17px; height: 17px; flex: 0 0 auto; }
+.navigation-badge { position: absolute; top: -5px; right: -5px; min-width: 17px; height: 17px; display: grid; place-items: center; padding: 0 4px; border: 2px solid var(--surface-strong); border-radius: 999px; color: #fff; background: #cf3154; font-size: 9px; font-weight: 800; line-height: 1; }
+.page-navigation-label { white-space: nowrap; }
+.looply-account { display: flex; align-items: center; gap: 9px; }
+.looply-user-avatar, .looply-user-initial { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; }
+.looply-user-initial { display: grid; place-items: center; color: var(--primary); background: var(--lilac); font-weight: 800; }
+.looply-account > span { display: grid; gap: 2px; }
+.looply-account strong { font-size: 12px; }
+.looply-account small { color: var(--muted); font-size: 10px; }
+.looply-account .header-action { min-height: 38px; }
+
+.looply-account-menu { position: relative; z-index: 1200; flex: 0 0 auto; margin-left: auto; }
+.looply-account-menu > summary { list-style: none; cursor: pointer; }
+.looply-account-menu > summary::-webkit-details-marker { display: none; }
+.looply-account-menu[open] > summary { color: var(--primary); }
+.account-menu-caret { color: var(--muted); font-size: 16px; line-height: 1; }
+.account-menu-popover { position: absolute; top: calc(100% + 8px); right: 0; z-index: 1300; display: grid; min-width: 190px; gap: 4px; padding: 8px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface-strong); box-shadow: var(--shadow-md); }
+.account-menu-link { display: block; padding: 10px 12px; border-radius: 10px; color: var(--text); font-size: 13px; text-decoration: none; }
+.account-menu-link:hover, .account-menu-link[aria-current=\"page\"] { color: var(--primary); background: var(--surface-soft); }
+.account-menu-popover .header-action { width: 100%; min-height: 38px; margin-top: 4px; }
+.theme-picker select { min-height: 38px; padding: 0 10px; border: 1px solid var(--line); border-radius: 14px; color: var(--muted); background: var(--surface-strong); }
+.looply-footer { margin: 22px 0 0; color: var(--muted); font-size: 11px; text-align: center; }
+.page-notice { padding: 20px; }
+@media (max-width: 760px) {
+  .looply-page .page-navigation { position: fixed; z-index: 900; left: 50%; bottom: calc(7px + env(safe-area-inset-bottom)); display: flex; width: min(calc(100% - 14px), 900px); flex: none; justify-content: flex-start; gap: 3px; padding: 6px; overflow-x: auto; border: 1px solid var(--line); border-radius: 20px; background: color-mix(in srgb, var(--surface-strong) 91%, transparent); box-shadow: 0 12px 36px rgba(35, 20, 50, .2); backdrop-filter: blur(22px); transform: translateX(-50%); scrollbar-width: none; }
+  .looply-page .page-navigation::-webkit-scrollbar { display: none; }
+  .looply-page .page-navigation .header-action { flex: 1 0 52px; min-width: 52px; min-height: 52px; flex-direction: column; gap: 3px; padding: 5px 6px; border-color: transparent; border-radius: 13px; background: transparent; box-shadow: none; font-size: 10px; }
+  .looply-page .page-navigation [aria-current="page"] { background: color-mix(in srgb, var(--primary) 10%, var(--surface-strong)); }
+  .looply-page .page-header { top: 5px; gap: 10px; backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .looply-page .container-page { padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
+  .looply-account { margin-left: auto; }
+}
+@media (max-width: 520px) {
+  .looply-page .page-navigation .header-action { font-size: 9px; }
+  .page-navigation-label[data-short-label] { font-size: 0; }
+  .page-navigation-label[data-short-label]::after { content: attr(data-short-label); font-size: 10px; }
+  .looply-account > span { display: none; }
+  .looply-account .theme-picker { display: none; }
+}
