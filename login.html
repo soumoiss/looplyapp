@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#F5F0FA">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+  <title>Login — Looply</title>
+  <script src="config.js"></script>
+</head>
+<body>
+  <main class="login-page">
+    <section class="login-card" aria-labelledby="loginTitle">
+      <div class="login-brand">
+        <div class="login-logo" aria-hidden="true">
+          <div class="circle">
+            <svg viewBox="0 0 100 100" fill="none"><path d="M50 15A35 35 0 0 1 85 50" stroke="currentColor" stroke-width="5"/></svg>
+          </div>
+        </div>
+        <div class="login-brand-name" id="loginTitle">Looply</div>
+        <div class="login-brand-subtitle">Cartas aos amigos ;)</div>
+      </div>
+
+      <form id="loginForm" novalidate>
+        <div class="form-field">
+          <label class="form-label" for="username">Quem és?</label>
+          <div class="input-wrap"><input class="input" id="username" name="username" type="text" placeholder="Digite seu usuário" autocomplete="username" required></div>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="password">código secreto</label>
+          <div class="input-wrap">
+            <input class="input password-input" id="password" name="password" type="password" placeholder="Digite sua senha" autocomplete="current-password" required>
+            <button class="toggle-password" id="togglePassword" type="button" aria-label="Mostrar senha">
+              <svg id="eyeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="forgot"><a href="https://wa.me/558589069191?text=esqueci%20minha%20senha" target="_blank" rel="noopener noreferrer">Esqueci minha senha</a></div>
+        <button class="login-button" id="loginButton" type="submit">Avante!</button>
+        <div class="form-message" id="message" role="alert" aria-live="polite">Não foi possível entrar. Confira seu usuário e sua senha.</div>
+      </form>
+
+      <div class="login-footer"><strong>Looply</strong> · MoissWorld</div>
+    </section>
+  </main>
+  <script type="module" src="assets/js/login.js"></script>
+</body>
+</html>
